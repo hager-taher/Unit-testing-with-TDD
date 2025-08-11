@@ -51,14 +51,14 @@ public class StopWatchTest {
         StopWatch stopWatch = new StopWatch();
 
         // Act
-        stopWatch.record(1440);
+        stopWatch.record(7340); // 5 days  2 hours  20 minutes
 
         // Assert
         int days = stopWatch.getDays();
         int minutes = stopWatch.getMinutes();
         int hours = stopWatch.getHours();
-        assertEquals(1, days);
-        assertEquals(0, minutes);
-        assertEquals(0, hours);
+        assertEquals(5, days);
+        assertEquals(20, minutes);
+        assertEquals(2, hours);
     }
 }
