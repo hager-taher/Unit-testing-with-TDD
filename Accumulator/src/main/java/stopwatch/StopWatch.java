@@ -13,6 +13,10 @@ public class StopWatch {
              this.hours = this.minutes / 60;
             this.minutes = this.minutes % 60;
         }
+        recordDays(this.hours);
+        
+    }
+    public void recordDays(int hours){
         int hoursPerDay = 24 ;
          if(isWorking) 
          hoursPerDay =8 ;

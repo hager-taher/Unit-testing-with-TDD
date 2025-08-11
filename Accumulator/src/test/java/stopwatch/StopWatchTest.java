@@ -65,7 +65,7 @@ public class StopWatchTest {
     void givenStopWatch_whenRecord_8_HoursAndDaySetToWorking_thenIncreaseDays(){
         // Arrange
         StopWatch stopWatch = new StopWatch();
-        stopWatch.setWorkingTime(true);
+        stopWatch.setIsWorking(true);
 
         // Act
         stopWatch.record(4580); // 3 days 4 hours 20 mins
