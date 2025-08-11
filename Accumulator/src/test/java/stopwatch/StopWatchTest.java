@@ -61,4 +61,21 @@ public class StopWatchTest {
         assertEquals(20, minutes);
         assertEquals(2, hours);
     }
+     @Test
+    void givenStopWatch_whenRecord_8_HoursAndDaySetToWorking_thenIncreaseDays(){
+        // Arrange
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.setWorkingTime(true);
+
+        // Act
+        stopWatch.record(4580); // 3 days 4 hours 20 mins
+        int days = stopWatch.getDays();
+        int minutes = stopWatch.getMinutes();
+        int hours = stopWatch.getHours();
+
+        // Assert
+        assertEquals(3, days);
+        assertEquals(20, minutes);
+        assertEquals(4, hours);
+    }
 }
