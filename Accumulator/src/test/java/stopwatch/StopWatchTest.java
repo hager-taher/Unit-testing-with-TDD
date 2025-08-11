@@ -37,12 +37,12 @@ public class StopWatchTest {
         StopWatch stopWatch = new StopWatch();
 
         // Act
-        stopWatch.record(60);
+        stopWatch.record(130);
 
         // Assert
         int minutes = stopWatch.getMinutes();
         int hours = stopWatch.getHours();
-        assertEquals(0, minutes);
-        assertEquals(1, hours);
+        assertEquals(10, minutes);
+        assertEquals(2, hours);
     }
 }
