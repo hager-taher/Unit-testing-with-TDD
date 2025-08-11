@@ -31,7 +31,7 @@ public class StopWatchTest {
             Assertions.fail("Invalid value");
         }
     }
-@Test
+ @Test
     void givenStopWatch_whenRecord_60_Minutes_thenIncreaseHours(){
         // Arrange
         StopWatch stopWatch = new StopWatch();
@@ -44,5 +44,21 @@ public class StopWatchTest {
         int hours = stopWatch.getHours();
         assertEquals(10, minutes);
         assertEquals(2, hours);
+    }
+    @Test
+    void givenStopWatch_whenRecord_24_Hours_thenIncreaseDays(){
+        // Arrange
+        StopWatch stopWatch = new StopWatch();
+
+        // Act
+        stopWatch.record(1440);
+
+        // Assert
+        int days = stopWatch.getDays();
+        int minutes = stopWatch.getMinutes();
+        int hours = stopWatch.getHours();
+        assertEquals(1, days);
+        assertEquals(0, minutes);
+        assertEquals(0, hours);
     }
 }
